@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 20%;
+            height: 350px;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 5px black;
+        }
+
+        .slides {
+            width: 400%;
+            height: 100%;
+            display: flex;
+        }
+
+        .slide_nav {
+            display: flex;
+            text-align: center;
+        }
+
+        .cir {
+            height: 10px;
+            width: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .box {
+            width: 25%;
+            display: flex;
+            transition: 0.5s;
+        }
+
+        input {
+            display: none;
+        }
+
+        #r1:checked~.s1 {
+            margin-left: 0;
+        }
+
+        #r2:checked~.s1 {
+            margin-left: -25%;
+        }
+
+        #r3:checked~.s1 {
+            margin-left: -50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slides">
+            <input type="radio" name="r" id="r1" checked>
+            <input type="radio" name="r" id="r2">
+            <input type="radio" name="r" id="r3">
+            <div class="box s1">
+                <img src="img-1.png" alt="">
+            </div>
+            <div class="box">
+                <img src="img-2.png" alt="">
+            </div>
+            <div class="box">
+                <img src="img-3.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="slide_nav">
+        <label for="r1" class="cir"></label>
+        <label for="r2" class="cir"></label>
+        <label for="r3" class="cir"></label>
+    </div>
+</body>
+
+</html>
